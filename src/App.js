@@ -23,6 +23,7 @@ function App() {
 	//back into a javascript array
 	//the word "cart" in strings is just a key that refers to the item you want to retrieve and not the same
 	//as the cart array
+
 	//const [cart, setCart] = useState(localStorage.getItem("cart") ? JSON.parse(localStorage.getItem("cart")) : []);
 
 	//every time the value of cart changes we call localStorage.setItem and give it the key to store the value under (cart)
@@ -37,17 +38,17 @@ function App() {
 	};
 
 	//udate cart so it no longer contains books with the specified id
-	/*const removeItem = (id) => {
+	const removeItem = (id) => {
 		//set cart to an array of products that no longer contain products with the id received from ShoppingCartItem.js
 		//filter returns true for items we want to keep and false for items we don't want to keep
 		setCart(cart.filter(product => product.id !== id))		
 
-	};*/
+	};
 
 	return (
 		<ProductContext.Provider value = {{products, addItem}}>
 
-			<CartContext.Provider value = {cart} >
+			<CartContext.Provider value = {{cart, removeItem}} >
 
 				<div className="App">
 
