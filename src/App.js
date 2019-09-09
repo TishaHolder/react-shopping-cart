@@ -19,6 +19,11 @@ function App() {
 		setCart([...cart, item]);
 	};
 
+	//udate cart so it no longer contains books with the specified id
+	const removeItem = (id) => {
+
+	};
+
 	return (
 		<ProductContext.Provider value = {{products, addItem}}>
 

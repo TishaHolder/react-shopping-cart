@@ -8,6 +8,8 @@ import Product from './Product';
 
 const Products = () => {
 
+	//instead of object destructurig we could use const value  = useContext(ProductContext); 
+	//and use value.products.map and value.addItem
 	const { products, addItem } = useContext(ProductContext);
 
 	return (
