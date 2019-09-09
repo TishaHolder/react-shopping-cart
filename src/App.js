@@ -21,6 +21,9 @@ function App() {
 
 	//udate cart so it no longer contains books with the specified id
 	const removeItem = (id) => {
+		//set cart to an array of products that no longer contain products with the id received from ShoppingCartItem.js
+		//filter returns true for items we want to keep and false for items we don't want to keep
+		setCart(cart.filter(product => product.id !== id))		
 
 	};
 
